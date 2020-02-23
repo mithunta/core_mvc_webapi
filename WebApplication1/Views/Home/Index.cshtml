@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@ViewData["TodaysDate"]
+<br />
+
+@ViewBag.WebsiteName
+<br />
+
+@ViewData["temp"].ToString()
+<br />
+
+<a href="/student/index">Go to Student Index Page</a>
+<br />
+
+<a href="/home/contact/10?name=mithun">Go to Contact Page</a>
+
+<form action="/home/confirmation" method="post">
+    First Name :<input type="text" name="firstname" id="firstname" value="Test" /> <br />
+    Last Name : <input type="text" name="lastname" id="lastname" /> <br />
+
+    First Name 1:<input type="text" name="firstname1" id="firstname1" /> <br />
+    <select name="numbers" id="numbers">
+        <option value="1">One</option>
+        <option value="2">two</option>
+        <option value="3">Three</option>
+    </select>
+    <input type="hidden" name="hdnSeletedNumberText" id="hdnSelectedNumberText"  />
+    <br />
+    <button type="submit" value="Submit">Submit</button>
+</form>
+
+

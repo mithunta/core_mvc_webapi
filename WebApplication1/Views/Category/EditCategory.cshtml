@@ -1,0 +1,30 @@
+﻿@model WebApplication1.Models.Categories
+@{
+    ViewData["Title"] = "EditCategory";
+}
+
+<h1>EditCategory</h1>
+
+<form method="post" action="/category/editsubmit">
+    <div class="row">
+        <div class="col-sm-3">
+            Category Name :
+        </div>
+        <div class="col-sm-3">
+            <input type="text" name="categoryname" id="categoryname" value="@Model.CategoryName" placeholder="Enter your category name" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            Category Description :
+        </div>
+        <div class="col-sm-3">
+            <input type="text" name="categorydesc" id="categorydesc" value="@Model.Description"  placeholder="Enter your category description" />
+        </div>
+    </div>
+    <div>
+        <input type="hidden" name="categoryid" value="@Model.CategoryId" />
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+</form>
+

@@ -1,0 +1,8 @@
+C:\dev\Personal\RemoteTiger\Batch3\WebApplication1\WebApplication1.Model\bin\Debug\netstandard2.0\WebApplication1.Model.deps.json
+C:\dev\Personal\RemoteTiger\Batch3\WebApplication1\WebApplication1.Model\bin\Debug\netstandard2.0\WebApplication1.Model.dll
+C:\dev\Personal\RemoteTiger\Batch3\WebApplication1\WebApplication1.Model\obj\Debug\netstandard2.0\WebApplication1.Model.csprojAssemblyReference.cache
+C:\dev\Personal\RemoteTiger\Batch3\WebApplication1\WebApplication1.Model\obj\Debug\netstandard2.0\WebApplication1.Model.AssemblyInfoInputs.cache
+C:\dev\Personal\RemoteTiger\Batch3\WebApplication1\WebApplication1.Model\obj\Debug\netstandard2.0\WebApplication1.Model.AssemblyInfo.cs
+C:\dev\Personal\RemoteTiger\Batch3\WebApplication1\WebApplication1.Model\bin\Debug\netstandard2.0\WebApplication1.Model.pdb
+C:\dev\Personal\RemoteTiger\Batch3\WebApplication1\WebApplication1.Model\obj\Debug\netstandard2.0\WebApplication1.Model.dll
+C:\dev\Personal\RemoteTiger\Batch3\WebApplication1\WebApplication1.Model\obj\Debug\netstandard2.0\WebApplication1.Model.pdb

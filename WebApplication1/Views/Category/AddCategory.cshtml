@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "AddCategory";
+}
+
+<h1>AddCategory</h1>
+
+<form method="post" action="/category/addsubmit">
+    <div class="row">
+        <div class="col-sm-3">
+            Category Name :
+        </div>
+        <div class="col-sm-3">
+            <input type="text" name="categoryname" id="categoryname" placeholder="Enter your category name" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            Category Description :
+        </div>
+        <div class="col-sm-3">
+            <input type="text" name="categorydesc" id="categorydesc" placeholder="Enter your category description" />
+        </div>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+</form>
+

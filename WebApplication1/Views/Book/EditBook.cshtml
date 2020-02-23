@@ -1,0 +1,59 @@
+﻿@model WebApplication1.Models.EditBookViewModel;
+@{
+    ViewData["Title"] = "AddBook";
+    List<Categories> categories = Model.Categories;
+}
+
+<h1>AddBook</h1>
+
+<form asp-action="editsubmit" asp-controller="book">
+    <div class="row">
+        <div class="col-sm-3">
+            Book Name:
+        </div>
+        <div>
+            <input type="text" name="bookname" id="bookname" value="@Model.Books.BookName" />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-3">
+            Book Price:
+        </div>
+        <div>
+            <input type="number" name="bookprice" id="bookprice" step="0.01" value="@Model.Books.BookPrice"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            In stock:
+        </div>
+        <div>
+            <input type="checkbox" name="bookinstock" id="bookinstock"  @if(Model.Books.BookInStock) {<text>checked</text>} />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            Category:
+        </div>
+        <div>
+            <select name="category" id="category">
+                @foreach (var category in categories)
+                {
+                    if (category.CategoryId == Model.Books.CategoryId)
+                    {
+                        <option value="@category.CategoryId" selected>@category.CategoryName</option>
+                    }
+                    else
+                    {
+                        <option value="@category.CategoryId">@category.CategoryName</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <input type="hidden" name="bookid" id="bookid" value="@Model.Books.BookId" />
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+</form>

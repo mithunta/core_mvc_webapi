@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WebApplication1.Models.Categories>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<a href="/category/addcategory">Add Category</a>
+
+<table class="table table-bordered">
+    <tr>
+        <td>Category Id</td>
+        <td>Category Name</td>
+        <td>Category Description</td>
+        <td>Action</td>
+    </tr>
+    @if (Model != null && Model.Any())
+    {
+        foreach (var category in Model.ToList())
+        {
+        <tr>
+            <td>@category.CategoryId</td>
+            <td>@category.CategoryName</td>
+            <td>@category.Description</td>
+            <td>
+                <a href="/category/editcategory/@category.CategoryId">Edit</a>&nbsp;
+                <a href="/category/deletecategory/@category.CategoryId">Delete</a>
+            </td>
+        </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td colspan="3">No Records</td>
+        </tr>
+    }
+</table>

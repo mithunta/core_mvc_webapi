@@ -1,0 +1,32 @@
+﻿@model List<WebApplication1.Models.Books>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<a asp-action="addbook" asp-controller="book">Add Book</a> <br />
+<table class="table table-bordered">
+    <tr>
+        <td>Book Id</td>
+        <td>Book Name</td>
+        <td>Book Price</td>
+        <td>Book in Stock</td>
+        <td>Category Id</td>
+        <td></td>
+    </tr>
+    @foreach(var book in Model)
+    {
+<tr>
+    <td>@book.BookId</td>
+    <td>@book.BookName</td>
+    <td>@book.BookPrice</td>
+    <td>@book.BookInStock</td>
+    <td>@book.CategoryId</td>
+    <td>
+        <a asp-controller="book" asp-action="editbook" asp-route-id="@book.BookId">Edit</a> &nbsp;
+        <a asp-controller="book" asp-action="deletebook" asp-route-id="@book.BookId">Delete</a> &nbsp;
+    </td>
+</tr>
+    }
+</table>
